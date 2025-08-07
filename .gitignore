@@ -1,0 +1,18 @@
+# Ignore node_modules folders
+node_modules/
+
+# Ignore environment variable files
+.env
+
+# Ignore PID files
+*.pid
+
+# Ignore backend data and uploads
+backend/data/
+backend/uploads/
+
+# Ignore frontend build directory
+frontend/dist/
+
+# Optional logs or system files
+*.log

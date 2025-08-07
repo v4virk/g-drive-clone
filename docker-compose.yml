@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    env_file: ../.env
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./backend/data:/usr/src/app/data
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+    depends_on:
+      - frontend
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    env_file: ../.env
+    ports:
+      - "3000:80"
+    restart: unless-stopped

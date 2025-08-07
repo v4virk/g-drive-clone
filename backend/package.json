@@ -1,0 +1,25 @@
+{
+  "name": "google-drive-clone-backend",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node --watch app.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "better-sqlite3": "^12.2.0",
+    "@aws-sdk/client-s3": "^3.632.0",
+    "@aws-sdk/lib-storage": "^3.632.0",
+    "@aws-sdk/s3-request-presigner": "^3.632.0",
+    "multer": "^2.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "helmet": "^5.1.1",
+    "express-rate-limit": "^7.4.0"
+  }
+}
